@@ -30,16 +30,18 @@ const startGame = (gameArgs) => {
   rl.on('line', (input) => {
     if (!input) {
       console.log('Please make your move.');
-      rl.prompt();
-      return;
+      return rl.prompt();
     }
     if (input === EXIT_OPTION) {
       return rl.close()
     }
     if (input === HELP_OPTION) {
       const helpTable = getHelpTable(rules, gameArgs)
-      rl.prompt();
-      return
+      return rl.prompt();
+    }
+    if (+input < 1 || input > gameArgs.length) {
+      console.log('Select an option from available moves')
+      return rl.prompt();
     }
 
     const myMove = input
