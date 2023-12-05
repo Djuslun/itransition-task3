@@ -6,10 +6,10 @@ const printMenu = (gameArgs) => {
   console.log(menu)
 }
 
-const printResults = ({ gameArgs, myMove, compMove, rules, compMoveIndex, key }) => {
-  console.log(`Your move: ${gameArgs[myMove - 1]}`)
+const printResults = ({ yourMove, compMove, result, key }) => {
+  console.log(`Your move: ${yourMove}`)
   console.log(`Computer move: ${compMove}`)
-  console.log(`${rules[compMoveIndex][myMove - 1]}`)
+  console.log(`${result}`)
   console.log(`HMAC Key: ${key}`)
 }
 

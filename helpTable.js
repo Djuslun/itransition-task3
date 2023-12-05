@@ -1,6 +1,6 @@
 const AsciiTable = require('ascii-table')
 
-const getHelpTable = (ruleTable, gameArgs) => {
+const printHelpTable = (ruleTable, gameArgs) => {
   const table = new AsciiTable('Help')
   table.setHeading('v PC\\User >', ...gameArgs)
 
@@ -11,4 +11,4 @@ const getHelpTable = (ruleTable, gameArgs) => {
   console.log(table.toString())
 }
 
-module.exports = { getHelpTable }
+module.exports = { printHelpTable }
