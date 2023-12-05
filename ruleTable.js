@@ -1,7 +1,3 @@
-const AsciiTable = require('ascii-table')
-
-const strArr = ['1', '2', '3', '4', '5']
-
 const getRules = (arr) => {
   const res = Array(arr.length)
   for (let i = 0; i < arr.length; i++) {
@@ -22,14 +18,4 @@ const getRules = (arr) => {
   return res
 }
 
-
-const helpTable = getRules(strArr)
-
-const table = new AsciiTable('Help')
-table.setHeading('v PC\\User >', ...strArr)
-
-helpTable.forEach((row, index) => {
-  table.addRow(strArr[index], ...row)
-})
-
-console.log(table.toString())
+module.exports = { getRules }
